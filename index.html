@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>연세춘추 지면 아카이브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="hub.css">
+</head>
+<body>
+
+<section id="gate" class="gate">
+  <form id="gateForm" class="gate-card" autocomplete="off">
+    <div class="gate-mast">
+      <span class="gate-kicker">YONSEI CHUNCHU ARCHIVE</span>
+      <h1 class="gate-title">연세춘추</h1>
+      <p class="gate-sub" id="gateSub">지면 아카이브</p>
+    </div>
+    <label class="gate-label" for="gateKey">열람 키워드</label>
+    <input id="gateKey" class="gate-input" type="password" inputmode="numeric" placeholder="키워드를 입력하세요" required>
+    <button class="btn btn-primary gate-btn" type="submit">열람하기</button>
+    <p id="gateMsg" class="gate-msg" role="alert"></p>
+  </form>
+</section>
+
+<div id="app" class="hub" hidden>
+  <header class="mast">
+    <div class="mast-inner">
+      <div class="mast-title">
+        <span class="kicker">YONSEI CHUNCHU ARCHIVE</span>
+        <h1>연세춘추 <span id="span">지면 아카이브</span></h1>
+        <p id="stats" class="stats"></p>
+      </div>
+      <form id="searchForm" class="search" role="search">
+        <input id="q" type="search" placeholder="전체 연도에서 기사 제목·필자·본문 검색" aria-label="검색어">
+        <button class="btn btn-primary" type="submit">검색</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="results" class="results" hidden>
+      <div class="res-head">
+        <h2 id="resTitle"></h2>
+        <button id="resClose" class="btn btn-ghost" type="button">닫기</button>
+      </div>
+      <div id="yearChips" class="chips" role="tablist"></div>
+      <p id="loading" class="loading" hidden></p>
+      <ol id="resList" class="res-list"></ol>
+      <button id="more" class="btn btn-ghost more" type="button" hidden>더 보기</button>
+    </section>
+
+    <section class="years">
+      <h2 class="sec-title">연도별 지면</h2>
+      <div id="yearGrid" class="year-grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot"><b>v2 시험판</b>: AI 레이아웃(PP-DocLayoutV3) + 영역별 Mac 문자 인식으로 다시 만든 결과입니다. 기존판은 chunchu/site 입니다. · 원본 지면: 연세대학교 학술문화처 미래학술정보원 디지털 컬렉션 · 본문은 OCR 자동 인식 결과로 오탈자가 있을 수 있습니다.</footer>
+</div>
+
+<script src="years.js"></script>
+<script src="hub.js"></script>
+</body>
+</html>
